@@ -9,8 +9,8 @@ jobs:
     - name: installing nodejs
       uses: actions/setup-node@v4
     - name: install dependencies
-      uses: npm ci
+      run: npm ci
     - name: run test
-      uses: npm test
+      run: npm test
     - name: run linters
       uses: wearerequired/lint-action@v2
