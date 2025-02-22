@@ -1,0 +1,16 @@
+name: Test Workflow
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: installing nodejs
+      uses: actions/setup-node@v4
+    - name: install dependencies
+      uses: npm ci
+    - name: run test
+      uses: npm test
+    - name: run linters
+      uses: wearerequired/lint-action@v2
