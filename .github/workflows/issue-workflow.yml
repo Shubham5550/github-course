@@ -1,0 +1,9 @@
+name: issue workflow
+on:
+  issues:
+    types: [opened]
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: print issue
+      runs: echo "${{ github.event.issue.body }}""
